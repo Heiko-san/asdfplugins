@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+
+asdfplugin.GithubDownloader("ahmetb/kubectx").modify(
+    arch_amd64_value="x86_64",
+).download(
+    "kubectx_v{version}_{platform}_{arch}.tar.gz",
+    "kubectx.tgz",
+).download(
+    "kubens_v{version}_{platform}_{arch}.tar.gz",
+    "kubens.tgz",
+)

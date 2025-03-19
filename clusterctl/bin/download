@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GithubDownloader("kubernetes-sigs/cluster-api").download(
+    "clusterctl-{platform}-{arch}"
+)

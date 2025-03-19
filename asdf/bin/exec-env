@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+#export PYTHONPATH=~/.asdf/plugins/asdf/python3 
+export PYTHONPATH="$(dirname "${ASDF_INSTALL_PATH/installs/plugins}")/python3"

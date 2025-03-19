@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GenericDownloader(
+    "https://dl.k8s.io/release/v{version}/bin/{platform}/{arch}"
+).download("kubectl")

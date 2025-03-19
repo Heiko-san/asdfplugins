@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GithubDownloader("argoproj/argo-workflows").download(
+    "argo-{platform}-{arch}.gz"
+)

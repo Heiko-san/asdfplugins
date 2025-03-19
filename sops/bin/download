@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GithubDownloader("getsops/sops").download(
+    "sops-v{version}.{platform}.{arch}"
+)

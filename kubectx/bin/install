@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GenericInstaller().install(
+    {"kubectx": None},
+    "kubectx.tgz",
+).install(
+    {"kubens": None},
+    "kubens.tgz",
+)

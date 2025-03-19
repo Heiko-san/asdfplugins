@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GenericInstaller().install({"argocd": None})

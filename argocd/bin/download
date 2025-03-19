@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GithubDownloader("argoproj/argo-cd").download("argocd-{platform}-{arch}")

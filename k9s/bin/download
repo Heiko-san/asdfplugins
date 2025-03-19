@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GithubDownloader("derailed/k9s").modify(
+    platform_lower=False,
+).download("k9s_{platform}_{arch}.tar.gz")

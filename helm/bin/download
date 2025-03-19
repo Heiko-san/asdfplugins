@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GenericDownloader("https://get.helm.sh").download(
+    "helm-v{version}-{platform}-{arch}.tar.gz"
+)
