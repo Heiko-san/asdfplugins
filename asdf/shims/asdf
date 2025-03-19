@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # asdf-plugin: asdf
 SCRIPTPATH="$(realpath "$0")"
-ASDFPATH="$(dirname "${SCRIPTPATH/shims/installs}")/asdf"
-LATEST="$(ls "${ASDFPATH}" | tail -1)"
-exec "${ASDFPATH}/${LATEST}/bin/asdf" exec "asdf" "$@"
+INSTALLPATH="${SCRIPTPATH/shims/installs}"
+LATEST="$(ls "${INSTALLPATH}" | tail -1)"
+exec "${INSTALLPATH}/${LATEST}/bin/asdf" exec "asdf" "$@"
