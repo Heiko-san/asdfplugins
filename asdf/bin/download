@@ -3,7 +3,7 @@ import os
 import sys
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "python3"))
-import asdfplugin
+import asdfplugin  # noqa: E402
 
 asdfplugin.GithubDownloader("asdf-vm/asdf").download(
     "asdf-v{version}-{platform}-{arch}.tar.gz"

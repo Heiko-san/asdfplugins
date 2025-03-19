@@ -6,6 +6,13 @@ import requests
 class GithubLister(GenericLister):
     """
     GithubLister fetches versions from api.github.com releases of given repo.
+
+    repo:
+    - the repo part of github url (e.g. "kubernetes-sigs/kustomize")
+
+    url:
+    - the url to query for versions
+    - default: https://api.github.com/repos/{repo}/releases
     """
 
     def __init__(self, repo: str):

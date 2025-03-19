@@ -66,10 +66,11 @@ class GenericListBase(object):
     def modify_versions(self, versions: list[str]) -> list[str]:
         """Applies the patterns of list_all() to the versions list."""
         new_versions = list()
-        for v in versions:
-            if self.version_filter.search(v):
-                v2 = self.version_replace.sub(self.version_replacement, v)
-                new_versions.append(v2)
+        for version in versions:
+            if self.version_filter.search(version):
+                new_versions.append(
+                    self.version_replace.sub(self.version_replacement, version)
+                )
         return new_versions
 
     def sort_versions(self, versions: list[str]) -> list[str]:

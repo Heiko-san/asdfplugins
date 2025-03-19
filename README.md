@@ -11,6 +11,8 @@ I wrote the plugins with most recent versions / tool update in mind.
 If the deployments worked in a different way for some tool in the past, old versions may not be installable with these plugins.
 However feel free to open an issue if you need one, I may have a look on it as the requirement pops up.
 
+Only stable versions will be presented, versions like "-rc1" will be removed from the list.
+
 # asdf plugin
 
 This one is special:

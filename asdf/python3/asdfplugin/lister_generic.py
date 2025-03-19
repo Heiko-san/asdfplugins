@@ -6,6 +6,9 @@ class GenericLister(GenericListBase):
     """
     GenericLister fetches versions from an url by applying the filter regex
     to the page.
+
+    url:
+    - the url to query for versions
     """
 
     def __init__(self, url: str):
