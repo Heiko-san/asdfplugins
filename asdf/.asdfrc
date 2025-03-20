@@ -1,1 +1,2 @@
 post_asdf_reshim_asdf = sed -i "s|^exec asdf|exec ~/.asdf/installs/asdf/${1}/bin/asdf|" ~/.asdf/shims/asdf
+legacy_version_file = yes

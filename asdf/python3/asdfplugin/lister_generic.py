@@ -26,7 +26,7 @@ class GenericLister(GenericListBase):
         """Extracts the relevant version strings from the response."""
         return self.version_filter.findall(str(response.content))
 
-    def get_raw_versions(self) -> list[str]:
+    def get_versions(self) -> list[str]:
         """Retrieves a list of all versions..."""
         versions = list()
         for response in self.do_requests():

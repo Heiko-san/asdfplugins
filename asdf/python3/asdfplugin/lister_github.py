@@ -50,5 +50,7 @@ class GithubLister(GenericLister):
         versions = list()
         for item in data:
             if not item["prerelease"] and not item["draft"]:
-                versions.append(item["tag_name"])
+                match = self.version_filter.search(item["tag_name"])
+                if match:
+                    versions.append(match.group(1))
         return versions

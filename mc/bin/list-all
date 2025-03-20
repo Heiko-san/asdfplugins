@@ -6,6 +6,5 @@ asdfplugin.GenericLister(
 ).modify(
     sort_versions=asdfplugin.sort_alphanumeric,
 ).list_all(
-    r"mc\.RELEASE\.[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}-[0-9]{2}-[0-9]{2}Z",
-    r"^mc\.RELEASE\.",
+    r"mc\.RELEASE\.([0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}-[0-9]{2}-[0-9]{2}Z)",
 )
