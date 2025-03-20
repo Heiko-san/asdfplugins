@@ -18,7 +18,8 @@ def sort_versions(versions: list[str]) -> list[str]:
 class GenericListBase(object):
     """
     GenericListBase provides the basic implementation of list_all().
-    Only get_raw_versions() needs to be implemented in actual subclasses.
+    Only get_versions() needs to be implemented in actual subclasses
+    deduplication, sorting and output is already implemented here.
     The modify(kwargs) function can be used to override attributes in a
     chainable way.
     """
