@@ -4,6 +4,7 @@ import re
 import stat
 import gzip
 import tarfile
+import zipfile
 import shutil
 import pathlib
 from typing import Self
@@ -67,7 +68,10 @@ class GenericInstaller(GenericInstallBase):
         assert os.path.isfile(source_path), f"{source_path} doesn't exist"
         if is_gzip_file(source_path):
             source = self.gunzip(source)
-        if tarfile.is_tarfile(os.path.join(self.download_path, source)):
+        source_path = os.path.join(self.download_path, source)
+        if zipfile.is_zipfile(source_path):
+            self.unzip(source)
+        if tarfile.is_tarfile(source_path):
             self.untar(source)
         self.install_files(files, source)
         return self
@@ -82,6 +86,13 @@ class GenericInstaller(GenericInstallBase):
             with open(target_path, "wb") as f_out:
                 shutil.copyfileobj(f_in, f_out)
         return target
+
+    def unzip(self, source: str):
+        """Unzip a zip archive."""
+        target_path = self.download_path
+        source_path = os.path.join(self.download_path, source)
+        print(f"unzipping {source_path} to {target_path}/")
+        zipfile.ZipFile(source_path).extractall(target_path)
 
     def untar(self, source: str):
         """Untar a tarball."""
