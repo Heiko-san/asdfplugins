@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GithubDownloader("google/yamlfmt").modify(
+    platform_lower=False,
+    arch_amd64_value="x86_64",
+).download("yamlfmt_{version}_{platform}_{arch}.tar.gz")
