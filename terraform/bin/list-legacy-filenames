@@ -1,3 +1,18 @@
 #!/usr/bin/env python3
+import os
+import sys
+import pathlib
 
-print(".terraform-version versions.tf terraform.tf")
+plugins_path = __file__.split(os.sep)[:-3]
+sys.path.append(os.sep.join([*plugins_path, "asdf", "python3"]))
+import asdfplugin  # noqa: E402
+
+
+version_files = [".terraform-version"]
+# dynamically add .tf files with terraform version blocks
+for tf_file in pathlib.Path(".").glob("*.tf"):
+    with open(tf_file, "r") as fh:
+        constraint = asdfplugin.constraint_from_tf_file(fh)
+        if constraint is not None:
+            version_files.append(str(tf_file))
+print(" ".join(version_files))
