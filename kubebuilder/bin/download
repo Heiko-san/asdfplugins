@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GithubDownloader("kubernetes-sigs/kubebuilder").download(
+    "kubebuilder_{platform}_{arch}"
+)
