@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GithubDownloader("gruntwork-io/terragrunt").download(
+    "terragrunt_{platform}_{arch}"
+)
