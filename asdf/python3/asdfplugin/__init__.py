@@ -7,3 +7,8 @@ from .lister_github import GithubLister  # noqa: F401
 from .downloader_generic import GenericDownloader  # noqa: F401
 from .downloader_github import GithubDownloader  # noqa: F401
 from .installer_generic import GenericInstaller  # noqa: F401
+from .version_constraint import (  # noqa: F401
+    VersionConstraint,
+    constraint_from_tf_file,
+    constraint_from_tf_string,
+)

@@ -39,9 +39,13 @@ class GenericListBase(object):
 
         Returns self to allow chaining.
         """
-        self.version_filter = re.compile(filter)
-        print(" ".join(self.sort_versions(list(set(self.get_versions())))))
+        print(" ".join(self.get_final_versions(filter)))
         return self
+
+    def get_final_versions(self, filter: str) -> list[str]:
+        """Returns the final, deduplicated and sorted versions list."""
+        self.version_filter = re.compile(filter)
+        return self.sort_versions(list(set(self.get_versions())))
 
     def get_versions(self) -> list[str]:
         """
