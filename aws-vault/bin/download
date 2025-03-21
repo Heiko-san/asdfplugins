@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GithubDownloader("99designs/aws-vault").download(
+    "aws-vault-{platform}-{arch}"
+)

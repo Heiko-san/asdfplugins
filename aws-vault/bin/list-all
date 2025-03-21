@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GithubLister("99designs/aws-vault").list_all()
