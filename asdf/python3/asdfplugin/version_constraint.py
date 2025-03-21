@@ -77,7 +77,7 @@ def constraint_from_tf_string(constraint: str) -> VersionConstraint:
 
 terraform_block_start = re.compile(r"^terraform\s+{\s*$")
 block_end = re.compile(r"^}/s*$")
-constraint_re = r"\s*[!=<>~]{0,2}\s*(?:[0-9]+\.){1,2}[0-9]+\s*"
+constraint_re = r"\s*[!=<>~]{0,2}\s*(?:[0-9]+\.){0,2}[0-9]+\s*"
 constraints_re = r"((?:" + constraint_re + r",)*" + constraint_re + r")"
 terraform_version = re.compile(
     r'^\s*required_version\s*=\s*"' + constraints_re + r'"\s*$'
