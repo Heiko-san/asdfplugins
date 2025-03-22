@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GithubDownloader("terraform-linters/tflint").download(
+    "tflint_{platform}_{arch}.zip"
+)
