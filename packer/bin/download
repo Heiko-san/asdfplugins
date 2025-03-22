@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GenericDownloader(
+    "https://releases.hashicorp.com/packer/{version}",
+).download("packer_{version}_{platform}_{arch}.zip")
