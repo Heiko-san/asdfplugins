@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GithubDownloader("ddworken/hishtory").download(
+    "hishtory-{platform}-{arch}",
+)

@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GithubLister("ddworken/hishtory").list_all(
+    r"^v?(([0-9]+\.){1,2}[0-9]+)$",
+)
