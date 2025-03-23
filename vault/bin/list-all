@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GenericLister("https://releases.hashicorp.com/vault").list_all(
+    r'href="/vault/((?:[0-9]+\.){2}[0-9]+)/"',
+)

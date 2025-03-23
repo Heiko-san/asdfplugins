@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import asdfplugin
+
+asdfplugin.GenericDownloader(
+    "https://releases.hashicorp.com/vault/{version}",
+).download("vault_{version}_{platform}_{arch}.zip")
